@@ -1,0 +1,2 @@
+type User={name:string,age:number}
+const u1:User={name='khadar',age:37}

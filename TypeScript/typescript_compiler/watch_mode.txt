@@ -1,0 +1,30 @@
+tsc app.ts --watch
+
+tsc --init
+
+tsc --watch
+
+Includeing & Excluding Files
+tsconfig.json
+"exclude":[
+    //"analytics.ts",
+  ],
+  "include":[
+    "app.ts"
+  ],
+  "files":[
+    "app.ts"
+  ]
+
+Understanding TypeScript Core Libs
+tsconfig.json
+"lib": [
+      "dom",
+      "es6",
+      "dom.iterable",
+      "scripthost"
+    ]
+
+Working with source maps
+tsconfig.json
+"sourceMap": true, 

@@ -1,0 +1,17 @@
+TS is a javascript Superset
+A language building up on javascript
+npm install -g typescript
+
+######
+npm install -g npm@10.1.0
+
+#compiling process
+tsc file.ts
+
+#ESLint
+#Material Icon Theme
+#Path Intellisense
+#Prettier - Code formatter
+
+https://stackoverflow.com/questions/56199111/visual-studio-code-cmd-error-cannot-be-loaded-because-running-scripts-is-disabl
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
