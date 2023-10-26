@@ -57,4 +57,183 @@ tsconfig.js
 
 #Strict Compilation
 
+#TypeScript & Moderan Javascript
+var,let & const - block scope
+
+var:
+Scope: Global scoped or function scoped. The scope of the var keyword is the global or function scope. It means variables defined outside the function can be accessed globally, and variables defined inside a particular function can be accessed within the function. 
+
+eg 1:
+var a = 10
+function f() {
+    console.log(a)
+}
+f();
+console.log(a);
+
+eg 2:
+function f() {
+ 
+    // It can be accessible any
+    // where within this function
+    var a = 10;
+    console.log(a)
+}
+f();
+ 
+// A cannot be accessible
+// outside of function
+console.log(a);
+
+eg 3:
+
+var a = 10
+// User can re-declare
+// variable using var
+var a = 8
+ 
+// User can update var variable
+a = 7
+
+let:
+The let keyword is an improved version of the var keyword.
+Scope: block scoped: The scope of a let variable is only block scoped. It can’t be accessible outside the particular block ({block}).
+
+eg 1:
+let a = 10;
+function f() {
+    let b = 9
+    console.log(b);
+    console.log(a);
+}
+f();
+
+eg 2:
+let a = 10;
+function f() {
+    if (true) {
+        let b = 9
+ 
+        // It prints 9
+        console.log(b);
+    }
+ 
+    // It gives error as it
+    // defined in if block
+    console.log(b);
+}
+f()
+ 
+// It prints 10
+console.log(a)
+
+eg 3:
+let a = 10
+ 
+// It is not allowed
+let a = 10
+ 
+// It is allowed
+a = 10
+
+eg 4:
+let a = 10
+if (true) {
+    let a = 9
+    console.log(a) // It prints 9
+}
+console.log(a) // It prints 10
+
+
+const keyword in JavaScript: The const keyword has all the properties that are the same as the let keyword, except the user cannot update it.
+
+Scope: block scoped: When users declare a const variable, they need to initialize it, otherwise, it returns an error. The user cannot update the const variable once it is declared.
+
+eg 1:
+const a = 10;
+function f() {
+    a = 9
+    console.log(a)
+}
+f();
+
+eg 2:
+const a = {
+    prop1: 10,
+    prop2: 9
+}
+ 
+// It is allowed
+a.prop1 = 3
+ 
+// It is not allowed
+a = {
+    b: 10,
+    prop2: 9
+}
+
+
+JavaScript is a high-level programming language that is widely used to create dynamic web pages and web applications. Developers can use many libraries and frameworks to make the development process easier and faster.
+
+Vanilla JavaScript is the basic form of JavaScript used to create web applications. It involves writing pure JavaScript code without the use of pre-written libraries or frameworks.
+Vanilla JS is a fast, lightweight, cross-platform framework for building incredible, powerful JavaScript applications.
+
+popular JavaScript libraries
+React, Vue.js, Angular, jQuery, and Bootstrap
+
+Spread Operator:
+const hobbies=["Sports","Cooking","Listening Music"];
+const activeHobbies=["Hiking"];
+activeHobbies.push(...hobbies);
+//Note : ... Spread Operator
+
+console.log(activeHobbies);
+
+const person={
+  name:"xyz",
+  age:30
+};
+
+const copiedPerson={...person};
+console.log(copiedPerson);
+
+Rest Parameters:
+//...args (treat as array)
+const sum=(...args)=>{
+  return args.reduce((currentResult,currentValue)=>{
+      return currentResult=currentResult+currentValue;
+  },0);
+};
+
+console.log(sum(10,20.25,15.75,50,20));
+
+Array & Object Destructuring:
+
+const hobbies=["Sports","Cooking","Listening Music"];
+const activeHobbies=["Hiking"];
+activeHobbies.push(...hobbies);
+
+console.log(activeHobbies);
+
+const person={
+  name:"xyz",
+  age:30
+};
+
+const copiedPerson={...person};
+console.log(copiedPerson);
+
+//Array & Object Destructuring:
+const [hobby1,hobby2,...remaingHobbies]=activeHobbies;
+console.log(remaingHobbies);
+
+const {name:Username,age}=person;
+console.log(Username);
+
+classes,inheritance & interfaces:
+private and public access modifiers
+readonly - introducting typescript
+
+
+
 
