@@ -10,3 +10,7 @@ button?.addEventListener('click',()=>{
 });
 
 const map=new Map();
+
+function demo(info:any){
+    console.log(info);
+}

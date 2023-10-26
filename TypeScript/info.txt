@@ -15,3 +15,46 @@ tsc file.ts
 
 https://stackoverflow.com/questions/56199111/visual-studio-code-cmd-error-cannot-be-loaded-because-running-scripts-is-disabl
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+#Watch mode
+tsc app.ts --watch
+
+tsc --init
+
+tsc --watch
+
+#Includeing & Excluding Files
+tsconfig.json
+"exclude":[
+    //"analytics.ts",
+  ],
+  "include":[
+    "app.ts"
+  ],
+  "files":[
+    "app.ts"
+  ]
+
+#Understanding TypeScript Core Libs
+tsconfig.json
+"lib": [
+      "dom",
+      "es6",
+      "dom.iterable",
+      "scripthost"
+    ]
+
+#Working with source maps:
+tsconfig.json
+"sourceMap": true,
+
+#rootDir and outDir
+
+#Stop Emitting Files on Compilation Errors:
+tsconfig.js
+"noEmitOnError":true
+
+#Strict Compilation
+
+
